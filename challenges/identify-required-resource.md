@@ -46,7 +46,9 @@
 #### Load data to **quickkart** database
 1. In the pane on the left side, in the top section, select **Query editor (preview)**.
 1. Login to database, use username and passwoord provided in the previous step.
-1. In **Query editor (preview)**, Copy the following query and select **Run**.
+1. In **Query editor (preview)**, Copy the following query and paste inside the **query1** then select **Run**.
+![Run-Query](media/run-query-sql-db.png)
+
 ```
 create table Product
 (
