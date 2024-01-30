@@ -12,8 +12,8 @@ This web app needs to be fully architected in Azure Cloud.
 - Database: Azure SQL
 - Blob: Azure Storage
 
-## challenges
-1. Understand the Business Problem and Design a High-level Architecture Diagram.
+## Challenges
+1. [Understand the Business Problem and Design a High-level Architecture Diagram.](challenges/problem-statement.md)
 2. Identify and provisioned the required Azure Resources.
 3. Setup a Local Development Environment.
 4. Implement Login Functionality using Azure Function App.
