@@ -1,6 +1,6 @@
-## Challenge 1: Understand the Business Problem and Design a High-level Architecture Diagram.
+# Challenge 1: Understand the Business Problem and Design a High-level Architecture Diagram.
 
-### Problem Statement:
+## Problem Statement:
 Peter, the Chief Technical Officer (CTO) and Vice President of Engineering at Quick-Kart E-commerce, wants to employ cloud services for their application, relieving Quick-Kart E-commerce of any need for on-premises hardware. 
 
 Their infrastructure team and software developers are well-versed in using Azure services (IAAS) and want to take advantage of this chance to create a cutting-edge product that may serve as a roadmap for later employing PAAS to modernize their current applications and infrastructure.
@@ -19,7 +19,6 @@ Beyond what you develop for the proof of concept, Quick-Kart software developers
 
 The goal of Peter and the architects was to make this system as easy to operate as feasible. Although the Engineering department has an operations team, that group frequently feels overburdened with current responsibilities and has very little time to manage new software solutions.  The ideal situation would be for the software engineers to be able to instrument, oversee, and manage these endpoints on their own, but Quick-Kart E-commerce currently lacks a strong DevOps culture. While they are headed in that path, they would value any tools, procedures, or product choices that would make the instrumentation, monitoring, and management processes for their software developers simpler.
 
-### Task
-> 1. Form a team of 4 members
-> 2. Identfy the Azure Resource Required
-> 2. Desing a High-Level Architecture Diagram
+## Task
+1. Form a team of 4 members
+2. Desing a High-Level Architecture Diagram
