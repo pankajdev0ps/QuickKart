@@ -27,7 +27,7 @@
     - **Server:** 
         - Select Create new and create a new server with a **unique
         name** in any available location. 
-        - Use **SQL authentication** and specify `sqladmin` as the server admin login and a suitably complex password. 
+        - Use **SQL authentication** and specify ```sqladmin``` as the server admin login and a suitably ```Pa55w.rd``` password. 
         - >(**remember the password** - you'll need it later!)
     - **Want to use SQL elastic pool?**: No
     - **Workload environment:** Development
