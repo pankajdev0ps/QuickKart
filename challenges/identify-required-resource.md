@@ -17,7 +17,7 @@
 
 ## Tasks
 
-### Create Azure SQL Database 
+### 1. Create Azure SQL Database 
 1. In the Azure portal, select **＋ Create a resource** from the upper left-hand corner and search for Azure SQL. Then in the resulting **Azure SQL** page, select **Create**.
 
 2. Review the Azure SQL options that are available, and then in the SQL databases tile, ensure **Single database** is selected and select Create.
@@ -119,9 +119,9 @@ GO
 
 ```
 
-<br>
+<hr>
 
-### Create Azure Blob Storage
+### 2. Create Azure Blob Storage
 
 1. On the Azure portal home page, select **+ Create a resource** from the upper left-hand corner and search for *Storage account*. Then in the resulting **Storage account** page, select **Create**.
 1. Enter the following values on the **Create a storage account** page:
