@@ -146,6 +146,7 @@ GO
    - Set Allow Blob anonymous access to **Enabled** .
 1. Select **Containers** in the **Data storage** section.
 1. In the **Containers** page, select **&#65291; Container** and add a new container named **products** with a public access level of **Blob (anonymous read access for blobs only)**.
+   ![Create container text](media/create-container.png)
 1. When the **products** container has been created, verify that it's listed in the **Containers** page.
 1. In the pane on the left side, in the top section, select **Storage browser**.
 1. In the storage browser page, select **Blob containers** and then select the listed **products** container.
