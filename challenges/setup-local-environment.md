@@ -10,7 +10,59 @@ In this challenge you have to setup a local development environment with require
 1. Deploy frontend and backend code to Azure PAAS Services
 
 ### Task 1. Setup local development requirements.
+1. Download Visual Studio Community 2022 & install it with Azure Development SDK and .Net 3.1.
+   <https://visualstudio.microsoft.com/vs/community/>
+   ![Visual Studio Installer](media/vs-installer-1.png)
+   ![Visual Studio Installer](media/vs-installer-2.png)
+1. Download VS Code
+   <https://code.visualstudio.com/download)>
+1. Install Git <https://git-scm.com/downloads>
+1.	Open command prompt **(cmd)** and check the git version
 
+    ```git -v```
+
+1.	Install Node.js (18.19.0) from <https://nodejs.org/download/release/v18.19.0/>
+1. Install Angular CLI
+
+   ```npm install -g @angular/cli@13.3```
+
+   Check if the version is installed:
+
+   ```ng v```
+
+   ![Angular Version](media/angular-version.png)
+
+1. Create a directory name **quickkart**, in the terminal:
+   ```
+   cd\
+   md quickkart
+   cd quickkart
+   ```
+
+1. Clone the front-end repository using below url:
+
+   ```
+   git clone https://github.com/pankajdev0ps/Quick-Cart-FrontEnd
+   ```
+
+1. After cloning open **cmd** and navigate to **quickkart** directory where you have cloned the repository and install node module
+   ```
+   cd Quick-Cart-FrontEnd
+   npm install
+   ```
+
+   > **Note:** This will create the Node_Modules for Quick-Cart-FrontEnd project
+
+1. Go back to terminal and start the application: 
+    ```
+    ng s -o
+    ```
+
+
+1. Clone the backend Project
+    ```
+    git clone https://github.com/pankajdev0ps/Quick-Cart-Backend
+    ```
 
 
 ### Task 2. Create Azure SQL Database and load data. 
@@ -24,18 +76,24 @@ In this challenge you have to setup a local development environment with require
         - Select Create new and create a new server with a **unique
         name** in any available location. 
         - Use **SQL authentication** and specify `sqladmin` as the server admin login and a suitably `Pa55w.rd` password. (**remember the password** - you'll need it later!)
+        - Select **OK**
+        ![SQL Database](media/sqldb-cofig-portal.png)
     - **Want to use SQL elastic pool?**: No
     - **Workload environment:** Development
     - **Compute + storage:** Select change configuration
         - **Service Tier:** Basic
         - click **Apply**
+        ![SQL Database](media/sqldb-cofig-portal-2.png)
+        ![SQL Database](media/sqldb-cofig-portal-3.png)
     - **Backup storage redundancy:** Locally-redundant backup storage
 
 3. On the Create SQL Database page, select **Next :Networking >**, and on the Networking page, in the Network connectivity section, **select Public endpoint**. 
 
    Then **select Yes for both options** in the Firewall rules section to allow access to your database server from **Azure services** and **your current client IP address.**
 
-4. Select **Review + Create**, and then select **Create** to create Azure SQL database.<br>
+4. Select **Review + Create**, and then select **Create** to create Azure SQL database.
+
+   ![Alt text](media/sqldb-cofig-portal-4.png)
 
 > Wait for deployment to complete. Then go to the resource that was deployed.
 
