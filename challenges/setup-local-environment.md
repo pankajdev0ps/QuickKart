@@ -84,7 +84,9 @@ In this challenge you have to setup a local development environment with require
     - **Compute + storage:** Select change configuration
         - **Service Tier:** Basic
         - click **Apply**
+
         ![SQL Database](media/sqldb-cofig-portal-2.png)
+
         ![SQL Database](media/sqldb-cofig-portal-3.png)
     - **Backup storage redundancy:** Locally-redundant backup storage
 
@@ -102,7 +104,8 @@ In this challenge you have to setup a local development environment with require
 1. In the pane on the left side, in the top section, select **Query editor (preview)**.
 1. Login to database, use username and passwoord provided in the previous step.
 1. In **Query editor (preview)**, Copy the following query and paste inside the **query1** then select **Run**.
-![Run-Query](media/run-query-sql-db.png)
+
+   ![Run-Query](media/run-query-sql-db.png)
 
     ```
     create table Product
@@ -180,6 +183,7 @@ In this challenge you have to setup a local development environment with require
 1. In **Connection strings** page, copy **ADO.NET (SQL authentication)** connection string.
 1. Open a notepade and paste connection string in it.
 1. Replace *{your_password}* in connection string that you copied in previous step with **your database password**.
+   
    ![Alt text](media/sql-config-portal-5-conn.png)
 
 ### Task 3. Create Azure Storage Account and Upload files.
@@ -205,6 +209,7 @@ In this challenge you have to setup a local development environment with require
    - Set Allow Blob anonymous access to **Enabled** .
 1. Select **Containers** in the **Data storage** section.
 1. In the **Containers** page, select **&#65291; Container** and add a new container named **products** with a public access level of **Blob (anonymous read access for blobs only)**.
+   
    ![Create container text](media/create-container.png)
 1. When the **products** container has been created, verify that it's listed in the **Containers** page.
 1. In the pane on the left side, in the top section, select **Storage browser**.
