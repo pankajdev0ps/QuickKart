@@ -77,6 +77,7 @@ In this challenge you have to setup a local development environment with require
         name** in any available location. 
         - Use **SQL authentication** and specify `sqladmin` as the server admin login and a suitably `Pa55w.rd` password. (**remember the password** - you'll need it later!)
         - Select **OK**
+        
         ![SQL Database](media/sqldb-cofig-portal.png)
     - **Want to use SQL elastic pool?**: No
     - **Workload environment:** Development
