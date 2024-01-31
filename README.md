@@ -14,6 +14,7 @@ This web app needs to be fully architected in Azure Cloud.
 
 ## Challenges
 1. [Understand the Business Problem and Design a High-level Architecture Diagram.](challenges/problem-statement.md)
+1. [Setup a Local Development Environment.](challenges/setup-local-environment.md)
 1. Implement Login Functionality using Azure Function App.
 1. Integrate Azure Key Vault using the concept of Service Principle.
 1. Integrate Azure Blob Storage.

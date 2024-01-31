@@ -1,20 +1,5 @@
 # Challenge 2: Identify and provisioned the required Azure Resources.
 
-
-> Note: Identify all the required Azure Resource but provisioned only needed one.
-
-## Required Azure Service and Resources
-- Azure SQL Database
-- Azure Blob Storage
-- Azure Key Valut
-- Azure Web App
-- Azure Static Web App
-- Azure Service Bus Queue
-- Azure API Management
-- Azure Application Insight
-- Azure Logic App
-
-
 ## Tasks
 
 ### 1. Create Azure SQL Database 

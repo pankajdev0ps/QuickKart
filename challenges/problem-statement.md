@@ -19,11 +19,20 @@ Beyond what you develop for the proof of concept, Quick-Kart software developers
 
 The goal of Peter and the architects was to make this system as easy to operate as feasible. Although the Engineering department has an operations team, that group frequently feels overburdened with current responsibilities and has very little time to manage new software solutions.  The ideal situation would be for the software engineers to be able to instrument, oversee, and manage these endpoints on their own, but Quick-Kart E-commerce currently lacks a strong DevOps culture. While they are headed in that path, they would value any tools, procedures, or product choices that would make the instrumentation, monitoring, and management processes for their software developers simpler.
 
-## Task
-1. ### Form a team of 4 members
+## Tasks
+### Task 1. Form a team of 4 members
    You will be guided by the instructor how to form a group.
 
-1. ### Desing a High-Level Architecture Diagram
+### Task 2. Desing a High-Level Architecture Diagram
    ![Architecture Diagram](media/architecture.jpg)
-1. ### [Identify and provisioned the required Azure Resources.](challenges/identify-required-resource.md)
-1. ### [Setup a Local Development Environment.](setup-local-environment.md)
+### Task 3. Identify the required Azure Service and Resources.
+
+- Azure SQL Database
+- Azure Blob Storage
+- Azure Key Valut
+- Azure Web App
+- Azure Static Web App
+- Azure Service Bus Queue
+- Azure API Management
+- Azure Application Insight
+- Azure Logic App
