@@ -103,81 +103,85 @@ In this challenge you have to setup a local development environment with require
 1. In **Query editor (preview)**, Copy the following query and paste inside the **query1** then select **Run**.
 ![Run-Query](media/run-query-sql-db.png)
 
-```
-create table Product
-(
-ProductID int identity primary key,
-ProductName varchar(50),
-ProductPrice numeric(10),
-Vendor varchar(50),
-Discount int,
-ProductImage varchar(1000)
-)
-GO
+    ```
+    create table Product
+    (
+    ProductID int identity primary key,
+    ProductName varchar(50),
+    ProductPrice numeric(10),
+    Vendor varchar(50),
+    Discount int,
+    ProductImage varchar(1000)
+    )
+    GO
 
-insert into Product values('Sony Camera',20000,'Sony India',10,'Point_and_shoot_cameras.jpg')
-insert into Product values('Samsung TV',34000,'Samsung India',20,'TV.jpg')
-insert into Product values('Apple watch',30000,'Apple India',12,'watch.jpg')
-insert into Product values('TMC Protien',4000,'TMC India',15,'supplement.jpg')
-insert into Product values('US Polo Shirt',2500,'US Polo India',17,'shirt.jpg')
-insert into Product values('Aviator Eye glass',1000,'Aviator India',20,'eyewear.gif')
-insert into Product values('Spyker Jeans',2000,'Spyker India',50,'jeans.jpg')
-insert into Product values('Jumpsuit',500,'Rst India',20,'jumpsuits.gifs')
-GO
+    insert into Product values('Sony Camera',20000,'Sony India',10,'Point_and_shoot_cameras.jpg')
+    insert into Product values('Samsung TV',34000,'Samsung India',20,'TV.jpg')
+    insert into Product values('Apple watch',30000,'Apple India',12,'watch.jpg')
+    insert into Product values('TMC Protien',4000,'TMC India',15,'supplement.jpg')
+    insert into Product values('US Polo Shirt',2500,'US Polo India',17,'shirt.jpg')
+    insert into Product values('Aviator Eye glass',1000,'Aviator India',20,'eyewear.gif')
+    insert into Product values('Spyker Jeans',2000,'Spyker India',50,'jeans.jpg')
+    insert into Product values('Jumpsuit',500,'Rst India',20,'jumpsuits.gifs')
+    GO
 
-create table Customers
-(
-customerID int identity(1000,1) primary key,
-emailID   varchar(50) unique,
-FirstName varchar(50),
-LastName  varchar(50),
-Pincode   numeric(6),
-[password] varchar(50),
-userType char(1)
-)
-GO
+    create table Customers
+    (
+    customerID int identity(1000,1) primary key,
+    emailID   varchar(50) unique,
+    FirstName varchar(50),
+    LastName  varchar(50),
+    Pincode   numeric(6),
+    [password] varchar(50),
+    userType char(1)
+    )
+    GO
 
-insert into Customers values('customer1@cloudthat.com','Aplha','User',231216,'cust@1234','c')
-Go
+    insert into Customers values('customer1@cloudthat.com','Aplha','User',231216,'cust@1234','c')
+    Go
 
-create table Subscribers
-(
-subscriberID int identity primary key,
-emailID varchar(100) unique
-)
-GO
+    create table Subscribers
+    (
+    subscriberID int identity primary key,
+    emailID varchar(100) unique
+    )
+    GO
 
-create table Vendors
-(
-vendorID   int   identity primary key,
-vendorName varchar(200),
-vendorEmailID  varchar(200),
-vendorPassword varchar(200),
-customerType char(1) default 'v'
-)
-GO
+    create table Vendors
+    (
+    vendorID   int   identity primary key,
+    vendorName varchar(200),
+    vendorEmailID  varchar(200),
+    vendorPassword varchar(200),
+    customerType char(1) default 'v'
+    )
+    GO
 
-insert into vendors(vendorName,vendorEmailID,vendorPassword) values('Reebok','Rebok@quickcart.com','Kmail@1234')
-insert into vendors values('Adidas','Adidas@quickcart.com','Kmail@1234')
-insert into vendors values('Apple','Apple@quickcart.com','Kmail@1234')
-insert into vendors values('Oneplus','Oneplus@quickcart.com','Kmail@1234')
-GO
+    insert into vendors(vendorName,vendorEmailID,vendorPassword) values('Reebok','Rebok@quickcart.com','Kmail@1234')
+    insert into vendors values('Adidas','Adidas@quickcart.com','Kmail@1234')
+    insert into vendors values('Apple','Apple@quickcart.com','Kmail@1234')
+    insert into vendors values('Oneplus','Oneplus@quickcart.com','Kmail@1234')
+    GO
 
-create table orders
-(
-orderid int identity(1,1) primary key,
-custEmail varchar(50) references Customers(emailID),
-prodID int,
-prodCost int,
-orderdate dateTime default getDate()
-)
-GO
+    create table orders
+    (
+    orderid int identity(1,1) primary key,
+    custEmail varchar(50) references Customers(emailID),
+    prodID int,
+    prodCost int,
+    orderdate dateTime default getDate()
+    )
+    GO
 
-```
+    ```
 
-<hr>
+1. In the left pane of SQL Database, select **Connection strings** under **Setting**
+1. In **Connection strings** page, copy **ADO.NET (SQL authentication)** connection string.
+1. Open a notepade and paste connection string in it.
+1. Replace *{your_password}* in connection string that you copied in previous step with **your database password**.
+   ![Alt text](media/sql-config-portal-5-conn.png)
 
-### Task 3. Create Azure Storage Account and upload files.
+### Task 3. Create Azure Storage Account and Upload files.
 
 1. On the Azure portal home page, select **+ Create a resource** from the upper left-hand corner and search for *Storage account*. Then in the resulting **Storage account** page, select **Create**.
 1. Enter the following values on the **Create a storage account** page:
@@ -213,7 +217,73 @@ GO
 1. In the **Access Keys** page, for **key1** select **show** for **Connection string** and copy the connection string and paste it in the notepad.
 
 
-### Task 4. Test the frontend and backend code locally first
+### Task 4. Test the frontend and backend code locally
 
+#### Task 4.1 Run the Backend Dotnet App
+1. Open backend project either in Visual Studio or in VS Code. This document uses VS Code.
+
+1. Open a new terminal and navigate to **Quick-Cart-Backend** cloned repo and type the following command:
+
+    ```
+    code .
+    ```
+1. In **QuickKartWebService** project, open appsetting.json file and update the followings and save:
+   - **DBConnectionString**: paste the ADO.NET (Connestion string) copied earlier in the notepad.
+   - **StorageConnectionString**: paste the Connection string copied eralier in the notepad.
+   - **StorageUri**: replace `<storage_account_name>` with your storage account name.
+   > Sample code
+    ```
+    {
+    "Logging": {
+        "LogLevel": {
+        "Default": "Information",
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information"
+        }
+    },
+    "AllowedHosts": "*",
+    "connectionStrings": {
+        "DBConnectionString": "",
+        "StorageConnectionString": "",
+        "StorageUri": "https://<storage_account_name>.blob.core.windows.net/"
+        }
+    }
+    ```
+1. Run the backend app, go back to terminal if your termial is at **Quick-Cart-Backend** then run:
+
+    ```
+    cd QuickKartWebService
+    dotnet run
+    ```
+
+    > **Let the backend app keep running in the terminal**
+
+#### Task 4.2 Run the Frontend Angular App
+1. Open a new termianl, naviagte to **Quick-Cart-FrontEnd** cloned repo and type the following command:
+    > **! Important:** Make sure you have install node and anguler as mentioned in Task 1
+
+    ```
+    npm install
+    ```
+    > Ignore warnings
+
+1. Once installtion finished, run the following command in terminal to open VS Code:
+
+    ```
+    code .
+    ```
+
+1. Go back to terminal and run below command to start your angular app this will open the app in a deafult browser:
+
+    ```
+    ng s -o
+    ```
+1. Verify the app running in the browser
 
 ### Task 5. Deploy frontend and backend code to Azure PAAS Services
+
+#### Task 5.1 Deploy Frontend to Azure Static Web App.
+
+
+#### Task 5.2 Deply Backend to Azure App Service Web App.
+
