@@ -1,6 +1,6 @@
 # Challenge 3: Implement Login Functionality using Azure Function App.
 
-In this challenge you will be implementing the Login Function in local environment,. After successfull deployment publish it to Azure Funtions.
+In this challenge you will be implementing the Login Function in local environment, testing it with frontend app and deploye it to Azure Funtions App.
 
 > **Note:** We will use VS Code to implement Azure Funtion localy.
 For that you need to install following **extension** for VS code:
@@ -157,7 +157,7 @@ For that you need to install following **extension** for VS code:
 
     ![Function Url](media/login-function-9.png)
 
-1. Open your QuickKart Frontend project in VS code, open file *home-page.service.ts* which is under **src>app>home>HomePage-Services** and update the URL in **ValidateUser** Function with the URL copied in previous step.
+1. Open your QuickKart Frontend project in VS code, open file *home-page.service.ts* which is under **src>app>home>HomePage-Services** and update the URL in **ValidateUser** function with the **LoginFunction** URL copied in previous step.
 
     ![Angular App](media/angular-app-1.png)
 
@@ -177,7 +177,7 @@ For that you need to install following **extension** for VS code:
 
 1. Also, make sure your function app is running if not then start it again as done previously in step 13.
 
-    > Note: If the function URL change then update your FrontEnd App (*i.e.* home-page.service.ts->ValidateUser() URL)
+    > Note: If the function app URL change then update your FrontEnd App (*i.e.* home-page.service.ts->ValidateUser() URL)
 
 1. In Frontend App, click on login and provide the following details:
 

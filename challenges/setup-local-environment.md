@@ -32,35 +32,6 @@ In this challenge you have to setup a local development environment with require
 
    ![Angular Version](media/angular-version.png)
 
-1. Create a directory name **quickkart**, in the terminal:
-   ```
-   cd\
-   md quickkart
-   cd quickkart
-   ```
-
-1. Clone the front-end repository using below url:
-
-   ```
-   git clone https://github.com/pankajdev0ps/Quick-Cart-FrontEnd
-   ```
-
-1. After cloning open **cmd** and navigate to **quickkart** directory where you have cloned the repository and install node module
-   ```
-   cd Quick-Cart-FrontEnd
-   npm install
-   ```
-
-   > **Note:** This will create the Node_Modules for Quick-Cart-FrontEnd project
-
-1. Go back to terminal and start the application: 
-
-    ```
-    ng s -o
-    ```
-    As of now it will show miising images in the web page, you can stop it by pressing *ctlr+c* ni terminal.
-
-
 ### Task 2. Create Azure SQL Database and load data. 
 1. In the Azure portal, select **＋ Create a resource** from the upper left-hand corner and search for Azure SQL. Then in the resulting **Azure SQL** page, select **Create**.
 
@@ -223,7 +194,14 @@ In this challenge you have to setup a local development environment with require
 
 #### Task 4.1 Run the Backend Dotnet App
 
-1. Clone the backend Project
+1. Open a terminal and run the below commands to create a directory name **quickkart**, in the terminal:
+   ```
+   cd\
+   md quickkart
+   cd quickkart
+   ```
+
+1. Clone the Backend Project
 
     ```
     git clone https://github.com/pankajdev0ps/Quick-Cart-Backend
@@ -232,17 +210,20 @@ In this challenge you have to setup a local development environment with require
 1. Open backend project either in Visual Studio or in VS Code. 
     > **Note:** This document uses VS Code.
 
-1. Open a new terminal and navigate to **Quick-Cart-Backend** cloned repo and type the following command:
+1. Open a new terminal and navigate to **Quick-Cart-Backend** cloned repo and run the following command:
 
     ```
     code .
     ```
-1. In **QuickKartWebService** project, open appsetting.json file and update the followings and save:
+1. In VS Code **Explorer** select **QuickKartWebService** project, open *appsetting.json* file and update the followings and save:
+
    - **DBConnectionString**: paste the ADO.NET (Connestion string) copied earlier in the notepad.
+
    - **StorageConnectionString**: paste the Connection string copied eralier in the notepad.
+
    - **StorageUri**: replace `<storage_account_name>` with your storage account name.
    
-1. Run the backend app, go back to terminal if your termial is at **Quick-Cart-Backend** then run:
+1. Run the backend app, go back to terminal. If your terminal is at **Quick-Cart-Backend** then run:
 
     ```
     cd QuickKartWebService
@@ -252,28 +233,37 @@ In this challenge you have to setup a local development environment with require
     > **Let the backend app keep running in the terminal**
 
 #### Task 4.2 Run the Frontend Angular App
-1. Open a new termianl, naviagte to **Quick-Cart-FrontEnd** cloned repo and type the following command:
-    > **! Important:** Make sure you have install node and anguler as mentioned in Task 1
+
+1. Open a new terminal navigate to **quickkart** directory run the following command to clone the Frontend Project
 
     ```
-    npm install
-    ```
-    > Ignore warnings
-
-1. Once installtion finished, run the following command in terminal to open VS Code:
-
-    ```
-    code .
+    git clone https://github.com/pankajdev0ps/Quick-Cart-FrontEnd
     ```
 
-1. Go back to terminal and run below command to start your angular app this will open the app in a deafult browser:
+1. After cloning run the following command to install node_module:
+
+   ```
+   cd Quick-Cart-FrontEnd
+   npm install
+   ```
+
+   Open your QuickKart Frontend project in VS code:
+
+   ```
+   code .
+   ```
+
+1. Open file *home-page.service.ts* which is under **src>app>home>HomePage-Services** and update the URL in **getProducts** function with the URL of your backed.
+
+1. Go back to terminal and start the application: 
 
     ```
     ng s -o
     ```
-1. Verify the app running in the browser
 
+    > Ignore warnings
 
+1. Verify that the app is running in the browser
 
 
 ### Task 5. Deploy frontend and backend code to Azure PAAS Services
