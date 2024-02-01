@@ -54,15 +54,11 @@ In this challenge you have to setup a local development environment with require
    > **Note:** This will create the Node_Modules for Quick-Cart-FrontEnd project
 
 1. Go back to terminal and start the application: 
+
     ```
     ng s -o
     ```
-
-
-1. Clone the backend Project
-    ```
-    git clone https://github.com/pankajdev0ps/Quick-Cart-Backend
-    ```
+    As of now it will show miising images in the web page, you can stop it by pressing *ctlr+c* ni terminal.
 
 
 ### Task 2. Create Azure SQL Database and load data. 
@@ -226,7 +222,15 @@ In this challenge you have to setup a local development environment with require
 ### Task 4. Test the frontend and backend code locally
 
 #### Task 4.1 Run the Backend Dotnet App
-1. Open backend project either in Visual Studio or in VS Code. This document uses VS Code.
+
+1. Clone the backend Project
+
+    ```
+    git clone https://github.com/pankajdev0ps/Quick-Cart-Backend
+    ```
+
+1. Open backend project either in Visual Studio or in VS Code. 
+    > **Note:** This document uses VS Code.
 
 1. Open a new terminal and navigate to **Quick-Cart-Backend** cloned repo and type the following command:
 
@@ -237,24 +241,7 @@ In this challenge you have to setup a local development environment with require
    - **DBConnectionString**: paste the ADO.NET (Connestion string) copied earlier in the notepad.
    - **StorageConnectionString**: paste the Connection string copied eralier in the notepad.
    - **StorageUri**: replace `<storage_account_name>` with your storage account name.
-   > Sample code
-    ```
-    {
-    "Logging": {
-        "LogLevel": {
-        "Default": "Information",
-        "Microsoft": "Warning",
-        "Microsoft.Hosting.Lifetime": "Information"
-        }
-    },
-    "AllowedHosts": "*",
-    "connectionStrings": {
-        "DBConnectionString": "",
-        "StorageConnectionString": "",
-        "StorageUri": "https://<storage_account_name>.blob.core.windows.net/"
-        }
-    }
-    ```
+   
 1. Run the backend app, go back to terminal if your termial is at **Quick-Cart-Backend** then run:
 
     ```
@@ -285,6 +272,9 @@ In this challenge you have to setup a local development environment with require
     ng s -o
     ```
 1. Verify the app running in the browser
+
+
+
 
 ### Task 5. Deploy frontend and backend code to Azure PAAS Services
 
