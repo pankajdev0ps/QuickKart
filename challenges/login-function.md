@@ -219,7 +219,7 @@ For that you need to install following **extension** for VS code:
 
     ![Alt text](media/login-function-1.1.png)
 
-1. Select the folder to deploy: `Select the name or browse location of Loginc Function`.
+1. Select the folder to deploy: `Select the name or browse location of Login Function`.
 
 1. Select resource: `select the name of Azure Function App created in the previous step`
 
@@ -233,4 +233,4 @@ For that you need to install following **extension** for VS code:
 
     New URL will be: `https://azuthservice34x.azurewebsites.net/api/LoginFunction`
 
-1. Once updated re-run your frontend app and test the login functionality as done previously.
+1. Once updated re-run your frontend app and test the login functionality as previous.

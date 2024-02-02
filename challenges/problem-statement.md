@@ -23,7 +23,7 @@ The goal of Peter and the architects was to make this system as easy to operate 
 ### Task 1. Form a team of 4 members
    You will be guided by the instructor how to form a group.
 
-### Task 2. Desing a High-Level Architecture Diagram
+### Task 2. Design a High-Level Architecture Diagram
    ![Architecture Diagram](media/architecture.jpg)
 ### Task 3. Identify the required Azure Service and Resources.
 

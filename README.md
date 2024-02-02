@@ -18,8 +18,8 @@ This web app needs to be fully architected in Azure Cloud.
 1. [Implement Login Functionality using Azure Function App.](challenges/login-function.md)
 1. Integrate Azure Key Vault using the concept of Service Principle.
 1. Integrate Azure Blob Storage.
-1. Implement CI Pipeline.
-1. Implement CD Pipeline.
-1. Integrate wirh Azure Service Bus Queue.
+1. Implement CI Pipeline for Backend.
+1. Implement CD Pipeline for Backend.
+1. Integrate with Azure Service Bus Queue.
 1. Implement API Management.
 1. Integrate Frontend and Backend with Azure Application Insight.
