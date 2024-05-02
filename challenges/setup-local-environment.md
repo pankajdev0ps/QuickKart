@@ -129,9 +129,9 @@ In this challenge you have to setup a local development environment with require
     GO
 
     insert into vendors(vendorName,vendorEmailID,vendorPassword) values('Reebok','Rebok@quickcart.com','Kmail@1234')
-    insert into vendors values('Adidas','Adidas@quickcart.com','Kmail@1234')
-    insert into vendors values('Apple','Apple@quickcart.com','Kmail@1234')
-    insert into vendors values('Oneplus','Oneplus@quickcart.com','Kmail@1234')
+    insert into vendors(vendorName,vendorEmailID,vendorPassword) values('Adidas','Adidas@quickcart.com','Kmail@1234')
+    insert into vendors(vendorName,vendorEmailID,vendorPassword) values('Apple','Apple@quickcart.com','Kmail@1234')
+    insert into vendors(vendorName,vendorEmailID,vendorPassword) values('Oneplus','Oneplus@quickcart.com','Kmail@1234')
     GO
 
     create table orders
